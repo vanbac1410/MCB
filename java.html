@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <script src="./main.js"></script>
+  <div class="container-fluid">
+    <h1 style="text-align:center">
+      <p class="font-italic">Đinh Văn Bắc - B19DCDT019</p></h1>
+
+    <div class="row">
+      <div class="col-sm-12 image">
+        <p class="bg-info font-italic"
+        style="height: 50px; border-radius: 8px; font-size: 30px; text-align: center;">Thống Kê Lượng Mưa</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 image">
+        <div id="bg-danger" 
+        style="height: 100px; border-radius: 8px; font-size: 25px; text-align: center;">Nhiệt Độ
+        <p id="nhietdo"></p>
+        <script>
+        var x = document.getElementById("nhietdo").innerHTML = Math.floor(Math.random() * 101);
+        if (x<40){
+            document.getElementById("bg-danger").style.backgroundColor = "deepskyblue";
+        }else {
+            document.getElementById("bg-danger").style.backgroundColor = "red";
+        }
+        </script>
+        </div>
+      </div>
+      <div class="col-sm-4 image">
+        <div id="bg-primary"
+        style="height: 100px; border-radius: 8px; font-size: 25px; text-align: center;">Độ Ẩm
+        <p id="doam"></p>
+        <script>
+        var y = document.getElementById("doam").innerHTML = Math.floor(Math.random() * 101);
+        if (y<60){
+            document.getElementById("bg-primary").style.backgroundColor = "darkgrey";
+        }else {
+            document.getElementById("bg-primary").style.backgroundColor = "blue";
+        }
+        </script>
+        </div>
+      </div>
+      <div class="col-sm-4 image">
+        <div id="bg-warning"
+        style="height: 100px; border-radius: 8px; font-size: 25px; text-align: center;">Ánh Sáng
+        <p id="anhsang"></p>
+        <script>
+        var z = document.getElementById("anhsang").innerHTML = Math.floor(Math.random() * 101);
+        if (z<50){
+            document.getElementById("bg-warning").style.backgroundColor = "gold";
+        }else {
+            document.getElementById("bg-warning").style.backgroundColor = "orange";
+        }
+        </script>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-8">
+      <img src="https://docdn.giainhanh.io/media/attachments/506/b82b10baa0edf5e980cfe4b7758f3.png" height="335px" width="100%">
+    </div>
+
+    <div class="col-sm-4">
+      <p><div id="button1" style="height:150px; border-radius: 8px; font-size: 25px; text-align: center;">Button 1</p>
+        <button onclick="document.getElementById('button1').style.backgroundColor='aqua'" style="border-radius: 5px; background-color: gray;">ON</button>
+        <button onclick="document.getElementById('button1').style.backgroundColor='hotpink'" style="border-radius: 5px; background-color: gray;">OFF</button>
+      </div>
+      
+      <p><div id="button2" style="height:150px; border-radius: 8px; font-size: 25px; text-align: center;">Button 2</p>
+        <button onclick="document.getElementById('button2').style.backgroundColor='aqua'" style="border-radius: 5px; background-color: gray;">ON</button>
+        <button onclick="document.getElementById('button2').style.backgroundColor='hotpink'" style="border-radius: 5px; background-color: gray;">OFF</button>
+      </div>
+</body>
+</html>
